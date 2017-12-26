@@ -1,0 +1,97 @@
+*{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+body {
+    font-family: "Microsoft Yahei", 微软雅黑, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(187, 187, 187);
+    width: 100%;
+    text-align: left;
+    background-color: rgb(68, 68, 68);
+    background-image: url(./../img/bg.jpg?8d8421b8fb25);
+    background-attachment: fixed;
+    white-space: normal;
+    word-wrap: break-word;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0px auto !important;
+}
+#p{
+	font-size:38px;
+	color:white;
+	font-weight: bold;
+	margin-top:200px;
+	text-align:center;
+}
+#wrap{
+	width:300px;
+	height:250px;
+	margin:50px auto;
+}
+.user,.psd,.yan{
+	width:300px;
+	height:40px;
+	background:#fff;
+	margin-bottom:25px;
+}
+.user input,.psd input{
+	width:275px;
+	height:35px;
+	margin-left:20px;
+	border:none;
+	margin-top:2px;
+	outline:none;
+}
+#white{
+	color:white;
+	font-size:12px;
+	margin-top:-5px;
+}
+#white input{
+	vertical-align:middle;
+}
+#white span{
+	margin-left:130px;
+}
+#white a{
+	text-decoration: underline;
+	color:white;
+}
+.btn{
+	width:300px;
+	height:40px;
+	background:#29a3f9;
+	margin-top:20px;
+	text-align: center;
+	line-height:40px;
+	color:white;
+	font-size:16px;
+	font-weight: bold;
+}
+#deng{
+	color:white;
+	font-size:12px;
+	margin-top:20px;
+}
+::selection{
+	background:none;
+}
+#v_container{
+	float:right;
+}
+#code_input{
+	float:left;
+	width:150px;
+	height:35px;
+	margin-left:20px;
+	margin-top:2px;
+	border:none;
+	outline:none;
+}

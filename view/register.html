@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		li{
+			list-style:none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body {
+		    font-family: "Microsoft Yahei", 微软雅黑, "Helvetica Neue", Arial, sans-serif;
+		    font-size: 16px;
+		    color: rgb(187, 187, 187);
+		    width: 100%;
+		    text-align: left;
+		    background-color: rgb(68, 68, 68);
+		    background-image: url(./../img/bg.jpg?8d8421b8fb25);
+		    background-attachment: fixed;
+		    white-space: normal;
+		    word-wrap: break-word;
+		    background-repeat: no-repeat;
+		    background-position: center center;
+		    margin: 0px auto !important;
+		}
+		#p{
+			font-size:38px;
+			color:white;
+			font-weight: bold;
+			margin-top:200px;
+			text-align:center;
+		}
+		#wrap{
+			width:300px;
+			height:250px;
+			margin:50px auto;
+		}
+		.user,.psd{
+			width:300px;
+			height:40px;
+			background:#fff;
+			margin-bottom:25px;
+		}
+		.user input,.psd input{
+			width:275px;
+			height:35px;
+			margin-left:20px;
+			border:none;
+			margin-top:2px;
+			outline:none;
+		}
+		#white{
+			color:white;
+			font-size:12px;
+			margin-top:-5px;
+		}
+		#white input{
+			vertical-align:middle;
+		}
+		#white span{
+			margin-left:130px;
+		}
+		#white a{
+			text-decoration: underline;
+			color:white;
+		}
+		.btn{
+			width:300px;
+			height:40px;
+			background:#29a3f9;
+			margin-top:20px;
+			text-align: center;
+			line-height:40px;
+			color:white;
+			font-size:16px;
+			font-weight: bold;
+		}
+		#deng{
+			color:white;
+			font-size:12px;
+			margin-top:20px;
+		}
+		::selection{
+			background:none;
+		}
+		#white #red{
+			color:red;
+		}
+
+	</style>
+	<body>
+	<!--<form >
+      <input type="text" name="username" id="username" value="" />
+      <input type="password" name="password" id="password" value="" />    
+    	<input type="button" id="btn" value="注册"/>
+    </form>-->
+    
+    <p id="p">欢迎注册</p>
+    <form>
+    <div id="wrap">
+    	<div class="user">
+    		<input type="text" name="username" id="username" placeholder="手机号/邮箱/用户名"/>
+    	</div>
+    	<div class="psd">
+    		<input type="password" name="password" id="password" placeholder="请输入密码"/>   
+    	</div>
+    </form>
+    	<div class="psd">
+    		<input type="password" name="password2" id="password2" placeholder="请再次输入密码"/>   
+    	</div>
+    	<p id="white"><input type="checkbox"/>我已阅读并同意 <a href="#" id="red">会员注册协议</a></p>
+   		<div class="btn" id="btn">注册</div>
+    </div>
+    
+  </body>
+  <script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $("#btn").on("click", function(){
+      $.ajax({
+        type:"post",
+        url:"http://localhost:3000/users/registerAction",
+        data:$("form").serialize(),
+        success:function(data){
+          console.log(data)
+          if(data == "0"){
+            alert("该用户已注册，请直接登录")
+          }else if(data == "1"){
+            window.location.href = "login.html";
+          }else if(data == "2"){
+            alert("注册失败")
+          }
+        }
+      });
+    })
+    
+  </script>
+</html>

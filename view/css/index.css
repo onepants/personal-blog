@@ -1,0 +1,160 @@
+*{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+
+.header{
+	width:100%;
+	height:60px;
+	background:rgba(0,0,0,0.5);
+	overflow:hidden;
+}
+.datou{
+	width:50px;
+	float:left;
+}
+.datou img{
+	height:50px;
+	margin-top:5px;
+	margin-left:20px;
+}
+.header ul{
+	float:right;
+}
+.header ul li{
+	float:left;
+	padding:0 20px;
+	line-height:60px;
+}
+.header a{
+	color:white;	
+}
+.header a:hover{
+	color:red;
+	text-decoration: none;
+}
+body{
+	width:100%;
+	height:100%;
+	background-image: url('./../img/4.jpg');
+	background-attachment: fixed;
+	white-space: normal;
+	word-wrap: break-word;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0px auto !important;
+	background-size:100% 100%;
+}
+#wrap{
+	position: absolute;
+	overflow: hidden;
+	top:0px; left:0; right:0; bottom:0;
+	margin:100px auto;
+	width: 1200px;
+	height: 400px;
+}
+#wrap > ul{
+	width: 1200px;
+	list-style: none;
+}
+#wrap > ul > li{
+	float: left;
+	width: 100px;
+	height: 400px;
+	cursor: pointer;
+}
+#wrap > ul > li:nth-child(1){
+	background: url('./../img/1.jpg') no-repeat center/cover;
+}
+#wrap > ul > li:nth-child(2){
+	background: url('./../img/2.jpg') no-repeat center/cover;
+}
+#wrap > ul > li:nth-child(3){
+	background: url('./../img/3.jpg') no-repeat center/cover;
+}
+#wrap > ul > li:nth-child(4){
+	background: url('./../img/4.jpg') no-repeat center/cover;
+	width: 900px;
+}	
+#wrap > ul > li > .text{
+	width: 100px;
+	height: 100%;
+	background: #000;
+	opacity: .5;
+}
+#wrap > ul > li > .text p{
+	padding: 20px 40px;
+	font-family: 'Microsoft yahei';
+	color: #fff;
+}
+
+.container{
+	width:1200px;
+	border:1px solid #f66;
+	height:100%;
+	margin:0 auto;
+}
+.con_left{
+	width:750px;
+/*	height:100%;*/
+	float:left;
+}
+.con_left a{
+	color:#ddd;
+}
+.con_right{
+	width:420px;
+/*	height:100%;*/
+	float:left;
+	margin-left:30px;
+	background:rgba(0,25,0,.5);
+}
+.left{
+	width:710px;
+	height:106px;
+	background:rgba(0,0,0,.7);
+	padding:24px 24px 24px 16px;
+	margin-bottom:20px;
+}
+.left11{
+	width:480px;
+	height:106px;
+	float:left;
+	color:#bbb;
+	position:relative;
+}
+.left p{
+	position:absolute;
+	bottom:0;
+}
+.left12{
+	float:right;
+}
+.left img{
+	width:190px;
+	height:106px;
+}
+.footer{
+	width:1200px;
+	height:60px;
+	padding-top:20px;
+	border-top:1px solid #000;
+	margin:20px auto;
+	text-align:center;
+	font-size:12px;
+}
+.footer p{
+	margin-bottom:10px;
+}
+.footer a:hover{
+	color:white;
+}
+.death{
+	height:1050px;
+}

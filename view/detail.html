@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人博客</title>
+		<link rel="shortcut icon" href="//cdn-img.easyicon.net/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>-->
+	</head>
+	<body>
+		<div class="header">
+			<div class="datou"><img src="img/u=2480986093,3765910678&fm=27&gp=0.jpg" title="本人"/></div>
+			<ul>
+				<li><a href="">首页</a></li>
+				<li><a href="">博客</a></li>
+				<li><a href="login.html">登录</a></li>
+				<li><a href="register.html">注册</a></li>
+				<li><a href="game.html">游戏</a></li>
+			</ul>
+		</div>
+		<div class="banner">
+			<div id="wrap">
+			<ul>
+				<li>
+					<div class="text">
+						<p>尼尔机械纪元</p>
+					</div>
+				</li>
+				<li>
+					<div class="text">
+						<p>尼尔机械纪元2</p>
+					</div>
+				</li>
+				<li>
+					<div class="text">
+						<p>尼尔机械纪元3</p>
+					</div>
+				</li>
+				<li class="curr">
+					<div class="text">
+						<p>尼尔机械纪元4</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<div class="container" style="margin-top:470px;background:rgba(0,0,0,0.7)">
+   			    <div id="content"></div>
+							
+      	</div>
+      	
+      	<div class="footer">
+      		<p>Powered by: Django Bootstrap AWS Glyphicons Halflings</p>
+      		<p><a href="">新浪微博: @丧心病狂滴神</a> <a href="">断罪小学扛把子</a> <a href="">GitHub: chickendinner007</a></p>
+      	</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<!--<script type="text/javascript"src="js/bootstrap.min.js" ></script>-->
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		console.log(location.search.split("=")[1])
+		$.ajax({
+			type:"post",
+			url:"http://localhost:3000/articles/articleDetail",
+			data:{
+			  articleID:location.search.split("=")[1]
+			},
+			success:function(data){
+			  console.log(data)
+			  var result = JSON.parse(data)
+			  $("#title").html(result[0].title)
+			  $("#content").html(result[0].html)
+			}
+		});
+	</script>
+</html>
